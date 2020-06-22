@@ -1,0 +1,12 @@
+environments:
+  default:
+    values:
+      - ./values.yaml
+    secrets:
+      - ./secrets.enc.yaml
+  bld:
+    values:
+      - environments/bld/*.values.yaml
+    secrets:
+      - environments/bld/*.enc.yaml
+    missingFileHandler: Error

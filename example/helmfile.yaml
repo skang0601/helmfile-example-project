@@ -1,0 +1,10 @@
+# The ordering and rendering of these bases are confusing as fuck.
+bases:
+  - environments.yaml
+
+---
+
+helmfiles:
+  - path: ../helmfile.d/gitlab-runners.yaml
+    values:
+      - {{ .Values.gitlab_runner | toYaml }}

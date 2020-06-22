@@ -1,0 +1,12 @@
+# We configure our helm defaults here
+helmDefaults:
+  tillerless: true
+  cleanupOnFail: false               #dedicated default key for helm flag --cleanup-on-fail
+  verify: true
+  wait: true
+  timeout: 600
+  recreatePods: true
+  force: false # dunno lol
+  tls: true
+  historyMax: 10
+  createNamespace: true
